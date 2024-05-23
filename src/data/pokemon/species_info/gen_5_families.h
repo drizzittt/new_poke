@@ -1806,7 +1806,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     {
         .baseHP        = 85,
         .baseAttack    = 110,
-        .baseDefense   = 90
+        .baseDefense   = 90,
         .baseSpeed     = 87,
         .baseSpAttack  = 73,
         .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 85 : 70,
