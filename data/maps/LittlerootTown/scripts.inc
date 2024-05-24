@@ -2040,3 +2040,35 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 # 1021 "data/maps/LittlerootTown/scripts.pory"
 	.string "Let's go to my LAB.$"
+
+Fisherman::
+# 1025 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1026 "data/maps/LittlerootTown/scripts.pory"
+	faceplayer
+# 1027 "data/maps/LittlerootTown/scripts.pory"
+	goto_if_unset FLAG_RECEIVED_OLD_ROD, Fisherman_2
+# 1032 "data/maps/LittlerootTown/scripts.pory"
+	msgbox Fisherman_Text_1
+Fisherman_1:
+# 1034 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	end
+
+Fisherman_2:
+# 1028 "data/maps/LittlerootTown/scripts.pory"
+	msgbox Fisherman_Text_0
+# 1029 "data/maps/LittlerootTown/scripts.pory"
+	giveitem ITEM_OLD_ROD
+# 1030 "data/maps/LittlerootTown/scripts.pory"
+	setflag FLAG_RECEIVED_OLD_ROD
+	goto Fisherman_1
+
+
+Fisherman_Text_0:
+# 1028 "data/maps/LittlerootTown/scripts.pory"
+	.string "Here is an old rod!$"
+
+Fisherman_Text_1:
+# 1032 "data/maps/LittlerootTown/scripts.pory"
+	.string "Happy fishing!$"

@@ -1021,3 +1021,16 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "Let's go to my LAB.$"
 
 `
+script Fisherman {
+	lockall
+	faceplayer
+	if(!flag(FLAG_RECEIVED_OLD_ROD)) {
+		msgbox("Here is an old rod!")
+		giveitem(ITEM_OLD_ROD)
+		setflag(FLAG_RECEIVED_OLD_ROD)
+	} else {
+		msgbox("Happy fishing!")
+	}
+	releaseall
+	end
+}
